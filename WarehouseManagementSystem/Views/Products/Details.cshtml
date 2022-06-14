@@ -1,0 +1,42 @@
+﻿@model WarehouseManagementSystem.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details of @Html.DisplayFor(model => model.Name)</h1>
+
+<dl>
+    <hr />
+    <dl class="row product-details">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Quantity)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Quantity)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.RefCode)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.RefCode)
+            </dd>
+            <img src="@Model.Image" class="product-image" />
+    </dl>
+</div>
+<div class="buttons">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> 
+    <a asp-action="Index" asp-route-warehouseId="@Model.WarehouseId" class="btn btn-default">Back to List</a>
+</div>

@@ -1,0 +1,111 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+files-button{
+    border: solid 1px;
+    border-color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.product-image{
+    width:500px;
+    height:500px;
+    position: absolute;
+    left:50%;
+}
+
+.btn-default {
+    border: solid 1px;
+    border-color: gray;
+}
+.btn-default:hover{
+    background-color:lightgray;
+}
+
+.buttons{
+    margin-left: 120px;
+}
+
+.button-edit{
+    width:80px;
+    border-color:gray;
+}
+
+.buttons-edit{
+    margin-top:20px;
+}
+
+.button-create {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-details{
+    gap:10px;
+}
+
+.index-edit{
+    margin-right:5px;
+}
+.index-delete {
+    margin-left: 5px;
+    background-color: #9c0000;
+    color:white;
+}
+.index-delete:hover {
+    background-color: darkred;
+    color: white;
+}
+.index-create {
+    margin-top: 15px;
+    background-color: green;
+    color: white;
+}
+.index-create:hover{
+    color:white;
+    background-color:darkgreen;
+}
+.btn-delete {
+    background-color: #9c0000;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.edit-form-group{
+    width:500px;
+}
+
+.title{
+    text-align: center;
+}
+
+.buttons-index{
+    text-align: center;
+}

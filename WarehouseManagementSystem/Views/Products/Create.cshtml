@@ -1,0 +1,48 @@
+﻿@model WarehouseManagementSystem.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="title">Create New Product</h1>
+
+<hr />
+    <div>
+        <form asp-action="Create" enctype="multipart/form-data" class="edit-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group edit-form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group edit-form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group edit-form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group edit-form-group">
+                <label asp-for="RefCode" class="control-label"></label>
+                <input asp-for="RefCode" class="form-control" />
+                <span asp-validation-for="RefCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="btn btn-default button-create edit-form-group">
+                    Browse for images
+                <input type="file" name="file" style="display: none" />
+                </label>
+            </div>
+            <div class="form-group buttons-edit">
+                <input type="submit" value="Save" class="btn btn-primary button-edit" />
+                 <a asp-action="Index" asp-route-warehouseId=1 class="btn btn-default">Back to List</a>
+            </div>
+        </form>
+    </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
